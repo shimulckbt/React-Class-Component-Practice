@@ -12,13 +12,36 @@ export default class SignUp extends Component {
         }
     }
 
-    onSubmitHAndler = () => {
-        alert = this.inputValue
-    }
+
     onChangeHAndler = (e) => {
         let inputName = e.target.name;
         let inputValue = e.target.value;
         this.setState({ [inputName]: inputValue })
+
+        if (inputName === "fname") {
+            let namePattern = /^([a-zA-Z]){2,30}/;
+            if (!namePattern.test(inputValue)) {
+                this.setState({ fname: "Invalid First Name" })
+            }
+        }
+        if (inputName === "lname") {
+            let namePattern = /^([a-zA-Z]){2,30}/;
+            if (!namePattern.test(inputValue)) {
+                this.setState({ lname: "Invalid Last Name" })
+            }
+        }
+        if (inputName === "email") {
+            let emailPattern = /\S+@\S+\.\S+/;
+            if (!emailPattern.test(inputValue)) {
+                this.setState({ email: "Invalid Email" })
+            }
+        }
+        if (inputName === "phone") {
+            if (!Number(inputValue)) {
+                this.setState({ inputName: "Invalid Phone Number" });
+            }
+
+        }
     }
     render() {
         return (
