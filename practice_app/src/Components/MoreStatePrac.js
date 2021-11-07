@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class MOreStatePrac extends Component {
+class MoreStatePrac extends Component {
     constructor() {
         super();
         let obj = {
@@ -38,4 +38,4 @@ class MOreStatePrac extends Component {
     }
 }
 
-export default MOreStatePrac;
+export default MoreStatePrac;
