@@ -21,13 +21,19 @@ export default class JsonArray extends Component {
                 age: '20'
             },
         ]
-        const myData = myList.map((myList) => {
+        const myDataName = myList.map((myList) => {
             return <option>{myList.name}</option>
+        })
+        const myDataAge = myList.map((myList) => {
+            return <option>{myList.age}</option>
         })
         return (
             <div>
                 <select>
-                    {myData}
+                    {myDataName}
+                </select>
+                <select>
+                    {myDataAge}
                 </select>
             </div>
         )

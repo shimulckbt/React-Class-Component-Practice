@@ -8,8 +8,8 @@ export default class AppRoute extends Component {
         return (
             <div>
                 <Routes>
-                    <Route exact path='/demo' element={<DemoPage />} />
-                    <Route exact path='/stateprac' element={<StatePracPage />} />
+                    <Route path='/' element={<DemoPage />} />
+                    <Route path='/stateprac' element={<StatePracPage />} />
                 </Routes>
             </div>
         )
