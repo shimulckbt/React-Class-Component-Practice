@@ -23,7 +23,7 @@ class Demo extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitHandler}>
-                    <p>My first form<br />{this.state.name}</p>
+                    <p className="myHobby">My first form<br />{this.state.name}</p>
                     <input type="text" onChange={this.changeName} placeholder="your name" /><br />
                     <input type="submit" value="Submit Now" />
                     <Link to="/stateprac" target='_blank' style={{ textDecoration: "none" }}>State</Link>
