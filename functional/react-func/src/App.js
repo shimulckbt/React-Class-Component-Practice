@@ -15,7 +15,7 @@
 
 //   const switchNameHandler = (newName) => {
 //     // console.log('Was clicked!');
-//     // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
+//     // DON'T DO THIS: this.state.persons[0].name = 'Shimulimilian';
 //     setPersonState({
 //       persons: [
 //         { name: newName, age: 28 },
@@ -68,9 +68,9 @@ import Person from './Person/Person';
 class App extends Component {
   state = {
     persons: [
-      { name: 'Max', age: 28 },
-      { name: 'Manu', age: 29 },
-      { name: 'Stephanie', age: 26 }
+      { name: 'Shimul', age: 28 },
+      { name: 'Palash', age: 31 },
+      { name: 'Tutul', age: 22 }
     ],
     otherState: 'some other value',
     showPersons: false
@@ -78,12 +78,12 @@ class App extends Component {
 
   switchNameHandler = (newName) => {
     // console.log('Was clicked!');
-    // DON'T DO THIS: this.state.persons[0].name = 'Maximilian';
+    // DON'T DO THIS: this.state.persons[0].name = 'Shimulimilian';
     this.setState({
       persons: [
         { name: newName, age: 28 },
-        { name: 'Manu', age: 29 },
-        { name: 'Stephanie', age: 27 }
+        { name: 'Monu', age: 29 },
+        { name: 'Golu', age: 27 }
       ]
     })
   }
@@ -91,9 +91,9 @@ class App extends Component {
   nameChangedHandler = (event) => {
     this.setState({
       persons: [
-        { name: 'Max', age: 28 },
+        { name: 'Shimul', age: 28 },
         { name: event.target.value, age: 29 },
-        { name: 'Stephanie', age: 26 }
+        { name: 'Tutul', age: 26 }
       ]
     })
   }
@@ -123,7 +123,7 @@ class App extends Component {
           <Person
             name={this.state.persons[1].name}
             age={this.state.persons[1].age}
-            click={this.switchNameHandler.bind(this, 'Max!')}
+            click={this.switchNameHandler.bind(this, 'Shimul!')}
             changed={this.nameChangedHandler} >My Hobbies: Racing</Person>
           <Person
             name={this.state.persons[2].name}
