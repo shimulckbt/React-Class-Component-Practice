@@ -10,9 +10,15 @@ function App() {
     { id: 3, title: 'Education Insurance', amount: 4000, date: new Date(2022, 2, 1) },
     { id: 4, title: 'Health Insurance', amount: 6000, date: new Date(2022, 1, 15) },
   ];
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   return (
     <div className='App'>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
