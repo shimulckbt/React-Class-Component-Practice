@@ -7,10 +7,12 @@ import classes from './AddUser.module.css';
 const AddUser = (props) => {
    const [userName, setUserName] = useState('');
    const [age, setAge] = useState('');
+
    const submitHandler = (event) => {
       event.preventDefault();
-
       console.log(userName, age);
+      setUserName('');
+      setAge('');
    };
 
    const userNameChangeHandler = (event) => {
@@ -25,9 +27,9 @@ const AddUser = (props) => {
       <Card className={classes.input}>
          <form onSubmit={submitHandler}>
             <label htmlFor="username">Username</label>
-            <input id="username" type="text" onChange={userNameChangeHandler} />
+            <input id="username" type="text" value={userName} onChange={userNameChangeHandler} />
             <label htmlFor="age">Age (Years)</label>
-            <input id="age" type="number" onChange={ageeChangeHandler} />
+            <input id="age" type="number" value={age} onChange={ageeChangeHandler} />
             <Button type="submit">Add User</Button>
          </form>
       </Card>
