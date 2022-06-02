@@ -20,6 +20,10 @@ function App() {
     setIsLoggedIn(true);
   };
 
+  const logoutHandler = () => {
+    localStorage.removeItem('isLoggedIn');
+    setIsLoggedIn(false);
+  };
 
   return (
     <React.Fragment>
